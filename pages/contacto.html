@@ -1,47 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contáctanos</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-<header>
-    <h2>Pintureria Lodi</h2>  
-</header>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contáctanos</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Crimson+Text&family=Nunito:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header>
+            <a href="../index.html">
+                <h2>Pinturería 
+                    <div class="icono"><i class= "bi bi-paint-bucket"></i></div>LODI
+                </h2>
+            </a>
+            <nav>
+                <a href="../pages/productos.html"><i class="bi bi-search"></i>Productos</a>
+                <a href="../pages/carritodecompras.html"><i class="bi bi-bag"></i>Tienda</a>
+                <a href="../pages/contacto.html"><i class="bi bi-person"></i>Contacto</a> 
+            </nav>
+        </header>
         <main>
-            <h1>Contacto</h1>
-            <br>
-            <p>Completa tus datos y te contactaremos a la brevedad</p>
+            <h1 class="h1-contacto">Contacto</h1>
+            <h2 class="h2-contacto">Completa tus datos y te contactaremos a la brevedad</h2>
                 <form>
                     <ul>
-                    <li><label for="Nombre">Nombre</label><br>
-                    <input type="text" id="Nombre"></li>
-
-                    <li><label for="Correo electrónico">Correo electrónico</label><br>
-                    <input type="email" id="Correo electrónico"></li>
-
-                    <li><label for="Teléfono">Teléfono</label><br>
-                    <input type="text" id="Teléfono"></li>
-
-                    <li><label for="Motivo de Contacto">Motivo de contacto</label><br>
-                    <input type="text" id="Motivo de contacto"></li>
-
-                    <li><label for="Comentanos tu consulta">Comentanos tu consulta</label><br>
-                    <textarea name="" id="Comentanos tu consulta" cols="30" rows="10"></textarea></li>
-
-                    <li><input type="submit" value="Enviar"></li>
-                </ul>
+                        <li>
+                            <label for="Nombre">Nombre</label>
+                            <input type="text" id="Nombre">
+                        </li>
+                        <li><label for="Correo electrónico">Correo electrónico</label>
+                            <input type="email" id="Correo electrónico">
+                        </li>
+                        <li><label for="Teléfono">Teléfono</label>
+                            <input type="text" id="Teléfono">
+                        </li>
+                        <li><label for="Motivo de Contacto">Motivo de contacto</label>
+                            <input type="text" id="Motivo de contacto">
+                        </li>
+                        <li><label for="Comentanos tu consulta">Comentanos tu consulta</label>
+                            <textarea name="" id="Comentanos tu consulta" cols="30" rows="10"></textarea>
+                        </li>
+                        <li>
+                            <div class="boton1">
+                                <input type="submit" value="Enviar">
+                            </div>
+                        </li>
+                    </ul>
                 </form>
-
         </main>
         <footer>
-            <a href="./pages/preguntasfrecuentes.html">Preguntas Frecuentes</a>
-            <a href="./pages/contacto.html">Contacto</a>
+            <a href="../pages/preguntasfrecuentes.html">Preguntas Frecuentes</a>
+            <a href="../pages/contacto.html">Contacto</a>
         </footer>
-</body>
+    </body>
 </html>
 
 
