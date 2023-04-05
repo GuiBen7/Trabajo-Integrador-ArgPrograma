@@ -13,10 +13,10 @@ formCalculadora.addEventListener("submit", (event) =>{
     const rendimiento = 10
     const resultado = ( m2 / rendimiento ) * manos
     contenedorHTML.innerHTML =`
-    <div>
-        <h3>La cantidad de litros a utilizar es: ${resultado} Litros(* Rendimiento por litro 10 m2)</h3>
+    <div class="resultadojs">
+        <h3><font color="black">La cantidad de litros a utilizar es: ${resultado} Litros(Rendimiento por litro 10 m2)   </h3>
     </div>    
     `
-
+    formCalculadora.reset()
     
 })

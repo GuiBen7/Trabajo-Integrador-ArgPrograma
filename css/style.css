@@ -229,6 +229,10 @@ h1{
     background-color: white;
 }
 
+.resultadojs{
+    background-color: antiquewhite;
+}
+
 .h1-contacto{
     display: flex;
     align-items: center;
