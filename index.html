@@ -64,15 +64,15 @@
                         <ul class="calConteiner">
                             <li>
                                 <label for="">Altura de pared: </label>
-                                <input type="text" id="altura" name="altura">
+                                <input type="text" id="altura" name="altura" required>
                             </li>
                             <li>
                                 <label for="">Largo de pared: </label>
-                                <input type="text" id="largo" name="largo">
+                                <input type="text" id="largo" name="largo" required>
                             </li>
                             <li>
                                 <label for="">Cantidad de manos: </label>
-                                <input type="text" id="manos" name="manos">
+                                <input type="text" id="manos" name="manos" required>
                             </li>
                         </ul>
                         <input type="submit" value="Calcular" class="btn-calcular"/>
@@ -81,6 +81,29 @@
                     <p>* Se recomienda no descartar puertas y ventanas ya que siempre debe sobrar un poco de pintura. Cabe mencionar que en algunas ocaciones el rendimiento resulta ser menor de lo que indica el envase y hay que tener en cuenta la mayor absorción pintura de la pared durante la primera mano con respecto a las siguientes.</p>
                 </div>
             </section>
+            <div class="formularioContacto">
+                <h3>Contacto</h3>
+                <form id="contacto">
+                    <div class="imputContainer">
+                        <label for="">Ingrese su Nombre</label>
+                        <input type="text">
+                    </div>
+                    <div class="imputContainer">
+                        <label for="">Ingrese su Apellido</label>
+                        <input type="text">
+                    </div>
+                    <div class="imputContainer">
+                        <label for="">Ingrese su Telefono</label>
+                        <input type="text">
+                    </div>
+                    <div class="imputContainer">
+                        <label for="">Ingrese su Email</label>
+                        <input type="text">
+                    </div>
+                    <input type="submit" value="Enviar" class="btn-enviar">
+                </form>
+                <div class="contenedorUsuarios"></div>
+            </div>
         </main>
         <footer>
             <a href="./pages/preguntasfrecuentes.html">Preguntas Frecuentes</a>
