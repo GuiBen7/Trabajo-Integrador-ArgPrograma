@@ -32,6 +32,7 @@ const contenedorUsuariosHTML = document.querySelector(".contenedorUsuarios")
 const usuarios = []
 
 const renderizarUsuarios = () =>{
+    contenedorUsuariosHTML.innerHTML = ""
     for(const usuario of usuarios){
         contenedorUsuariosHTML.innerHTML +=`
         <div>
