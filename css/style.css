@@ -163,11 +163,13 @@ h1{
     position: relative;
     transition: 0.4s;
 }
+
 .item:hover{
     transform: scale(1.3);
     opacity: 1;
     filter: blur(0px);
 }
+
 .item0-1{
     background: rgb(227, 225, 210);
     font-size: 23px;
@@ -182,30 +184,37 @@ h1{
     background: rgb(209, 207, 208);
     font-size: 23px;
 }
+
 .item0-4{
     background: rgb(173, 169, 144);
     font-size: 23px;
 }
+
 .item0-5{
     background: rgb( 191, 202, 194);
     font-size: 23px;
 }
+
 .item0-6{
     background: rgb( 210, 200, 209);
     font-size: 23px;
 }
+
 .item0-7{
     background: rgb( 147, 154, 138);
     font-size: 23px;
 }
+
 .item0-8{
     background: rgb(62, 85, 93);
     font-size: 23px;
 }
+
 .item0-9{
     background: rgb(110, 106, 105);
     font-size: 23px;
 }
+
 /* .img4{
     height: 700px;
     margin-bottom: 35px;
