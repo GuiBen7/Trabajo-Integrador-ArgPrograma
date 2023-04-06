@@ -22,3 +22,40 @@ formCalculadora.addEventListener("submit", (event) =>{
     formCalculadora.reset()
     
 })
+
+/* Llamada de formulario de contacto */
+
+const formContacto = document.querySelector("#contacto")
+
+const contenedorUsuariosHTML = document.querySelector(".contenedorUsuarios")
+
+const usuarios = []
+
+const renderizarUsuarios = () =>{
+    for(const usuario of usuarios){
+        contenedorUsuariosHTML.innerHTML +=`
+        <div>
+            <h2><b><font color="black">Sus datos fueron grabados correctamente</b></h2>
+            <br>
+            <p><b>Nombre:   ${usuario.nombre}</b></p>
+            <p><b>Apellido:   ${usuario.apellido}</b></p>
+            <p><b>Telefono:   ${usuario.telefono}</b></p>
+            <p><b>Email:   ${usuario.email}</b></p>
+            <br>
+        </div>
+        `
+    }
+}
+
+formContacto.addEventListener("submit",(event)=>{
+    event.preventDefault()
+    usuarios.push({
+        nombre: formContacto.nombre.value,
+        apellido: formContacto.apellido.value,
+        telefono: formContacto.telefono.value,
+        email: formContacto.email.value,
+    })
+    renderizarUsuarios()
+    formContacto.reset()
+})
+
