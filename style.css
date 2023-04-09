@@ -14,15 +14,15 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 30px;
-    margin-right: 50px;
-    margin-left: 50px;
+    padding: 1em;
+    margin-right: 1em;
+    margin-left: 1em;
 }
 
 h2{
     display: flex;
     color: rgba(17, 18, 96, 0.492);
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .icono{
@@ -35,58 +35,62 @@ nav{
     gap: 130px;
 }
 
-a{
+a {
     color: rgba(17, 18, 96, 0.492);
-    font-size: 20px;
+    font-size: 25px;
     text-decoration: none;    
 }
 
-a i{
-    font-size: 20px;
-    
-}
 
-.nav1 a{
-    color: white;
-    text-decoration: none;
-}
 
 .Propaganda{
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    background-color: rgb(255, 77, 7);
-
+    background-color: rgb(254, 75, 5);
 }
 
-h1{
-    font-size: 55px;
+.Propaganda h1{
+    font-size: 60px;
     font-family: 'Caveat', cursive;
-
+    margin: 1em;
 }
+
+.tendencia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 255, 0.672);
+    padding: 1em;
+    height: 5em;
+    margin: 2em 1em;
+}
+
+.tendencia h3{
+    font-size: 30px;
+    color: white;
+}
+
 .carrusel{
+background-color: #fba7862d;
 width: 90%;
 max-width: 120vw;
 padding: 2em;
-border-radius: 5px;
+border-radius: 15px;
+border: none;
 overflow-x: hidden;
-
-
+justify-items: center;
 }
 .carrusel .grande{
     width: 300%;
-    background-color: #ffa07a42;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     padding: 2em;
-    border: none;
-    border-radius: 5px;
     box-shadow: 5px 5px 7px 10px rgba(19, 19, 19, 0.297);
-    transition: all .5s ease;
-    transform: translateX(-33%);
+    transition: all 1s ease;
+    transform: translateX(0%);
 }
 .carrusel .img{
     width: calc(100% / 3);
@@ -94,13 +98,14 @@ overflow-x: hidden;
     border-radius: 5px;
 }
 .carrusel .puntos{
-    width: 100%;
-    padding: 1em 0 0;
-    margin: 1em;
+    cursor: pointer;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    padding: 1em 0 0;
+    margin: 1em;
 }
 
 .carrusel .punto{
@@ -108,6 +113,7 @@ overflow-x: hidden;
     height: 1.5em;
     margin: 1em 1em 0;
     border-radius: 20px;
+    background-color: #afafaf;
     }
 
 .carrusel .punto.activo{
@@ -115,28 +121,13 @@ overflow-x: hidden;
 }
 
 
-.Inspiracion2023{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: rgba(0, 0, 255, 0.672);
-    height: 5em;
-    margin: 1em;
-}
-
-.Inspiracion2023 h3{
-    font-size: 30px;
-    color: white;
-}
-
-
 .Tienda{
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
     background-color: rgba(0, 0, 255, 0.672);
     height: 5em;
-    margin: 1em;
+    margin: 2em 1em;
 
 }
 .Tienda h3{

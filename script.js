@@ -76,22 +76,20 @@ const grande = document.querySelector('.grande')
 const punto = document.querySelectorAll('.punto')
 
 
-// cuando hago click en punto
-    // saber la posicion de ese punto
-    // aplicar un  transform translateX al grande
-    //quitar la clase activo de todos los puntos 
-    // añadir la clase activo al punto donde hicimos click
+// carrusel
 
 punto.forEach( (cadaPunto , i) => {
+ 
  punto[i].addEventListener('click', () => {
 
+    
     let posicion = i
-    // cuando la posicion es 0 el transformX es 0
-    // cuando la posicion es 0 el transformX es -33%
-    //operacion = posicion * -33
+    
     let operacion = posicion * -33
+    
     grande.style.transform = 'translateX' + operacion
 
+    
     punto.forEach( (cadaPunto , i) => {
         punto[i].classList.remove('activo')
     })
