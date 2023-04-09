@@ -65,150 +65,63 @@ h1{
     font-family: 'Caveat', cursive;
 
 }
-.seccionImagenes{
- display: flex;
-    margin-top: 20px;
-}
+.carrusel{
+width: 90%;
+max-width: 120vw;
+padding: 2em;
+border-radius: 5px;
+overflow-x: hidden;
 
-.imagen1 p{
-    font-size: 25px;
-    color: rgba(17, 18, 96, 0.492);
-    margin-left: 50px;
-    margin-right: 30px;
-    
-}
-
-.imagen2 p{
-    font-size: 25px;
-    color: rgba(17, 18, 96, 0.492);
-    margin-right: 30px;
-    
 
 }
-
-.imagen3 p{
-    font-size: 25px;
-    color: rgba(17, 18, 96, 0.492);
-    margin-right: 50px;
-    
-
-}  
-
-/* Codigo de Carrusel aun no desarrolado */
-
-/* es mas complicado de lo que pense */
-
-/* .carrusel {
-    margin: 24px 0px 12px;
+.carrusel .grande{
+    width: 300%;
+    background-color: #ffa07a42;
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     align-items: center;
-    padding: 0px;
-    margin: 0px;
-    height: 100%;
+    padding: 2em;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 5px 5px 7px 10px rgba(19, 19, 19, 0.297);
+    transition: all .5s ease;
+    transform: translateX(-33%);
+}
+.carrusel .img{
+    width: calc(100% / 3);
+    min-height: 10vh;
+    border-radius: 5px;
+}
+.carrusel .puntos{
     width: 100%;
-    
-}
-  
-.carrusel-seccion {
-    flex: 1;
-    overflow: hidden;
-}
-.carrusel-seccion-A {
-    height: 300px;
+    padding: 1em 0 0;
+    margin: 1em;
     display: flex;
-    transition: 250ms transform ease-in;
-}
-  
-.carrusel-seccion > div {
-    min-width: 100%;
-    height: 100%;
-    border-radius: 24px;
-}
-  
-.anterior,
-.siguiente {
-    z-index: 10;
-    position: relative;
-    height: 24px;
-    width: 24px;
-    margin: 0px 12px;
-    background-color: #34db88;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 150ms all ease-in;
-    -webkit-box-shadow: 0px 2px 5px 0px rgba(184, 184, 184, 1);
-    -moz-box-shadow: 0px 2px 5px 0px rgba(184, 184, 184, 1);
-    box-shadow: 0px 2px 5px 0px rgba(184, 184, 184, 1);
-}
-.anterior:hover,
-.siguiente:hover {
-    -webkit-box-shadow: 0px 2px 13px 0px rgba(128, 128, 128, 1);
-    -moz-box-shadow: 0px 2px 13px 0px rgba(128, 128, 128, 1);
-    box-shadow: 0px 2px 13px 0px rgba(128, 128, 128, 1);
-}
-  
-.anterior:after,
-.anterior:before,
-.siguiente:after,
-.siguiente:before {
-    content: "";
-    height: 10px;
-    width: 2px;
-    border-radius: 10px;
-    position: absolute;
-    left: 10px;
-}
-.siguiente:after,
-.siguiente:before {
-  left: 12px;
-}
-  
-.anterior:after {
-  top: 4px;
-  transform: rotate(45deg);
-}
-.anterior:before {
-  top: 10px;
-  transform: rotate(-45deg);
-}
-  
-.siguiente:after {
-    top: 4px;
-    transform: rotate(-45deg);
-}
-  .siguiente:before {
-  top: 10px;
-  transform: rotate(45deg);
-}
-
-.puntossuspensivos {
-    margin-bottom: 24px;
-    display: flex;
-    align-items: center;
+    flex-flow: row nowrap;
     justify-content: center;
+    align-items: center;
 }
-.puntos {
-    width: 8px;
-    height: 8px;
-    cursor: pointer;
-    border-radius: 8px;
-    background-color: #afafaf;
-    margin: 0px 4px;
-    transition: 100ms background-color ease-in;
-} */
 
-  
+.carrusel .punto{
+    width: 1.5em;
+    height: 1.5em;
+    margin: 1em 1em 0;
+    border-radius: 20px;
+    }
+
+.carrusel .punto.activo{
+    background-color: rgba(0, 0, 255, 0.563);
+}
+
 
 .Inspiracion2023{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: rgb(255, 77, 7);
-    border-radius: 80px;
-    height: 50px;
-    margin-right: 100px;
-    margin-left: 100px;
+    background-color: rgba(0, 0, 255, 0.672);
+    height: 5em;
+    margin: 1em;
 }
 
 .Inspiracion2023 h3{
@@ -217,29 +130,13 @@ h1{
 }
 
 
-/* .img1{
-    margin-bottom: 35px;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 30px;
-}
-
-.img2{
-    margin-bottom: 35px;
-    margin-right: 30px;
-}
-
-.img3{
-    margin-bottom: 35px;
-    margin-right: 50px;
-} */
-
 .Tienda{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: rgba(255, 77, 7, 0.519);
-    height: 50px;
+    background-color: rgba(0, 0, 255, 0.672);
+    height: 5em;
+    margin: 1em;
 
 }
 .Tienda h3{
@@ -251,19 +148,17 @@ h1{
     display: flex;
     justify-content: space-around;    
     margin-top: 20px;
+}
 
+.elige h2{
+    font-size: 40px;
+    color: rgba(17, 18, 96, 0.492);
 }
 
 .estaciones {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
- 
-}
-
-.elige h2{
-    font-size: 40px;
-    color: rgba(17, 18, 96, 0.492);
 }
 
 .estaciones h4{
@@ -298,7 +193,7 @@ h1{
     background-color: aliceblue;
     border: transparent;
     border-radius: 5px;
-    box-shadow: 5px 5px 10px 20px rgba(255, 255, 255, 0.594); 
+    box-shadow: 5px 5px 10px 20px rgba(17, 18, 96, 0.209); 
     transform: perspective(1000px) rotateX(10deg);
 }
 
@@ -308,6 +203,7 @@ h1{
     margin: 15px;
     border-top-right-radius: 35px;
     border-bottom-left-radius: 35px;
+    font-size: 23px;
     position: relative;
     transition: 0.4s;
     display: flex;
@@ -319,150 +215,100 @@ h1{
     transform: scale(1.3);
     opacity: 1;
     filter: blur(0px);
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.747)
+    box-shadow: 10px 5px 5px rgba(17, 18, 96, 0.492);
 }
 
 .item0-1{
     background: rgb(227, 225, 210);
-    font-size: 23px;
 }
 
 .item0-2{
     background: rgb(194, 196, 183);
-    font-size: 23px;
 }
 
 .item0-3{
     background: rgb(209, 207, 208);
-    font-size: 23px;
 }
 
 .item0-4{
     background: rgb(173, 169, 144);
-    font-size: 23px;
 }
 
 .item0-5{
     background: rgb( 191, 202, 194);
-    font-size: 23px;
 }
 
 .item0-6{
     background: rgb( 210, 200, 209);
-    font-size: 23px;
 }
 
 .item0-7{
     background: rgb( 147, 154, 138);
-    font-size: 23px;
 }
 
 .item0-8{
     background: rgb(62, 85, 93);
-    font-size: 23px;
 }
 
 .item0-9{
     background: rgb(110, 106, 105);
-    font-size: 23px;
 }
 
 .item1-1{
     background: rgb(230, 211, 194);
-    font-size: 23px;
 }
 .item1-2{
     background: rgb(232, 217, 210);
-    font-size: 23px;
 }
 .item1-3{
     background: rgb(219, 195, 185);
-    font-size: 23px;
 }
 .item1-4{
     background: rgb(226, 208, 134);
-    font-size: 23px;
 }
 .item1-5{
     background: rgb(218, 192, 165);
-    font-size: 23px;
 }
 .item1-6{
     background: rgb(182, 126, 127);
-    font-size: 23px;
 }
 .item1-7{
     background: rgb(193, 133, 73);
-    font-size: 23px;
 }
 .item1-8{
     background: rgb(147, 79, 44);
-    font-size: 23px;
 }
 .item1-9{
     background: rgb(97, 81, 82);
-    font-size: 23px;
 }
 
 .item2-1{
-    background: rgb(230, 211, 194);
-    font-size: 23px;
+    background: #8E354A;
 }
 .item2-2{
-    background: rgb(232, 217, 210);
-    font-size: 23px;
-}
-.item3-3{
     background: #c46424;
-    font-size: 23px;
 }
-.item4-4{
-    background: rgb(226, 208, 134);
-    font-size: 23px;
+.item2-3{
+    background: #FFA07A;
 }
-.item5-5{
-    background: rgb(218, 192, 165);
-    font-size: 23px;
+.item2-4{
+    background: #FFDAB9;
 }
-.item6-6{
-    background: rgb(182, 126, 127);
-    font-size: 23px;
+.item2-5{
+    background: #FDB813;
 }
-.item7-7{
-    background: rgb(193, 133, 73);
-    font-size: 23px;
+.item2-6{
+    background: #E38AAE;
 }
-.item8-8{
-    background: rgb(147, 79, 44);
-    font-size: 23px;
+.item2-7{
+    background: #1B4D3E;
 }
-.item9-9{
-    background: rgb(97, 81, 82);
-    font-size: 23px;
+.item2-8{
+    background: #3C435A;
 }
-/* .img4{
-    height: 700px;
-    margin-bottom: 35px;
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 50px;
+.item2-9{
+    background: #62422B;
 }
-
-.img5{
-    height: 700px;
-    margin-bottom: 35px;
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 50px;
-}
-
-.img6{
-    height: 700px;
-    margin-bottom: 35px;
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 50px;
-} */
 
 .Calculadora{
     display: flex;
@@ -497,7 +343,6 @@ h1{
     background-color: rgb(255, 77, 7);
     border-radius: 80px;
     height: 37vh;
-    margin-top: 20px;
 }
 
 .calConteiner{
@@ -536,71 +381,6 @@ h1{
     border-radius: 20px;
 }
 
-.formularioContacto{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(255, 77, 7);
-    border-radius: 80px;
-    height: 650px;
-    margin-right: 20px;
-    margin-left: 20px;
-    
-}
-.formularioContacto h3{
-    color: white;
-    font-size: 40px;
-}
-
-#contacto{
-    display: flex;
-    padding: 2px;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    background-color: rgb(255, 77, 7);
-    height: 60vh;
-}
-
-.inputContainer{
-    display: flex;
-    gap: 20px;
-    padding: 10px;
-    color: white;
-    font-size: 30px;
-    margin-right: 50px;
-}
-
-.inputContainer input{
-    padding: 5px;
-    font-size: 20px;
-    font-family: sans-serif;
-}
-.btn-enviar{
-    padding: 10px;
-    font-size: 20px;
-    background-color: rgb(87, 79, 70);
-    border-radius: 5px;
-    color: white;
-    border: solid rgb(87, 79, 70) 1px;
-    width: 150px;
-}
-
-.btn-enviar:hover{
-    transition: 1s ease-in-out;
-    color: rgb(46, 41, 37);
-    background-color: white;
-}
-
-.contenedorUsuarios{
-    display: flex;
-    align-items: end;
-    background-color: antiquewhite;
-    border-radius: 20px;
-    font-size: 20px;
-    color: black;
-}
 .h1-contacto{
     display: flex;
     align-items: center;
@@ -609,35 +389,97 @@ h1{
     border-radius: 80px; 
     height: 50px;
     color: white;
+    padding: 3vh 5vw;
+    margin-top: 5vh;
 }
 
 .h2-contacto{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: rgb(255, 77, 7);
     border-radius: 80px; 
     height: 20px;
-    font-size: 20px;
+    font-size: 30px;
+    padding: 3vh 5vw;
+    margin-top: 15px;
 }
 
-ul{
-    list-style: none;
-    margin-left: 45%;
+main {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh 3vw;
 }
 
-li{
+
+main form{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    margin-top: 5vh;
+}
+
+main form .inputcontainer{
+    background-color: rgb(87, 79, 70);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    font-size: 25px;
     color: white;
+    
+}
+main form .inputcontainer input{
+    border: none;
+    border-bottom: 1px solid orangered;
+    padding: 10px;
+    font-size: 25px;
+    background-color: rgb(87, 79, 70);
+    color: white;
+
 }
 
-label{
-    display: block;
+.btn-Registrar{
+    padding: 10px;
+    background-color: orangered;
+    border-radius: 5px;
+    color: white;
+    border: solid orangered 1px;
+    width: 200px;
+    font-size: 25px;
+}
+
+.btn-Registrar:hover{
+    transition: 1s ease-in-out;
+    color: orangered;
+    background-color: white;
+
+}
+
+.contenedorUsuarios{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 30px;
+    justify-content: center;
+}
+.card-user{
+    padding: 20px;
+    background-color: orangered;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 300px;
+
 }
 
 .boton1 input:focus{
     background-color: orangered;
     color: white;
 }
+
 
 .h1-productos{
     display: flex;
