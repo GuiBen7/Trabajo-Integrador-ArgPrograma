@@ -160,7 +160,7 @@ h1{
     margin: 15px;
     border-top-right-radius: 35px;
     border-bottom-left-radius: 35px;
-    position: relative;
+    /* position: relative; */
     transition: 0.4s;
 }
 
