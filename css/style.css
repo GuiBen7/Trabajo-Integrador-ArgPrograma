@@ -3,26 +3,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Caveat', cursive;
+    font-family: 'Crimson Text', serif;
 }
 
 body{
-    background-color: rgb(87, 79, 70);
+    background-color: rgba(236, 232, 226, 0.497);
 }
 
 header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 30px;
-    margin-right: 50px;
-    margin-left: 50px;
+    padding: 1em;
+    margin-right: 1em;
+    margin-left: 1em;
 }
 
 h2{
     display: flex;
-    color: white;
-    font-size: 30px;
+    color: rgba(50, 49, 58, 0.856);
+    font-size: 35px;
 }
 
 .icono{
@@ -35,261 +35,273 @@ nav{
     gap: 130px;
 }
 
-a{
-    color: white;
-    font-size: 20px;
+a {
+    color: rgba(50, 49, 58, 0.856);
+    font-size: 25px;
     text-decoration: none;    
 }
 
-a i{
-    font-size: 20px;
-    
-}
 
-.nav1 a{
-    color: white;
-    text-decoration: none;
-}
 
 .Propaganda{
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    background-color: rgb(255, 77, 7);
-    border-radius: 80px;
-    margin-right: 20px;
-    margin-left: 20px;
+    background-color: rgb(254, 75, 5);
+    border-radius: 30px;
+    
 }
 
-h1{
-    font-size: 40px;
+.Propaganda h1{
+    font-size: 60px;
+    font-family: 'Caveat', cursive;
+    margin: 1em;
 }
 
-.seccionImagenes{
+.tendencia {
     display: flex;
-    margin-top: 20px;
-}
-
-.imagen1 p{
-    font-size: 25px;
-    color: white;
-    margin-left: 50px;
-    margin-right: 30px;
-}
-
-.imagen2 p{
-    font-size: 25px;
-    color: white;
-    margin-right: 30px;
-}
-
-.imagen3 p{
-    font-size: 25px;
-    color: white;
-    margin-right: 50px;
-}
-
-.Inspiracion2023{
-    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    background-color: rgb(255, 77, 7);
-    border-radius: 80px;
-    height: 50px;
-    margin-right: 100px;
-    margin-left: 100px;
+    background-color: rgba(50, 49, 58, 0.856);
+    padding: 1em;
+    height: 5em;
+    margin: 2em 1em;
 }
 
-.Inspiracion2023 h3{
+.tendencia h3{
     font-size: 30px;
     color: white;
 }
 
-
-.img1{
-    margin-bottom: 35px;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 30px;
+.carrusel{
+background-color: #fba7862d;
+width: 90%;
+max-width: 120vw;
+padding: 2em;
+border-radius: 15px;
+border: none;
+overflow-x: hidden;
+justify-items: center;
+}
+.carrusel .grande{
+    width: 300%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    box-shadow: 5px 5px 7px 10px rgba(19, 19, 19, 0.297);
+    transition: all 1s ease;
+    transform: translateX(0%);
+}
+.carrusel .img{
+    width: calc(100% / 3);
+    min-height: 10vh;
+    border-radius: 5px;
+}
+.carrusel .puntos{
+    cursor: pointer;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1em 0 0;
+    margin: 1em;
 }
 
-.img2{
-    margin-bottom: 35px;
-    margin-right: 30px;
+.carrusel .punto{
+    width: 1.5em;
+    height: 1.5em;
+    margin: 1em 1em 0;
+    border-radius: 20px;
+    background-color: #afafaf;
+    }
+
+.carrusel .punto.activo{
+    background-color: rgba(0, 0, 255, 0.563);
 }
 
-.img3{
-    margin-bottom: 35px;
-    margin-right: 50px;
-}
 
 .Tienda{
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    background-color: rgb(255, 77, 7);
-    border-radius: 80px; 
-    height: 50px;
-    margin-right: 100px;
-    margin-left: 100px;
+    background-color: rgba(50, 49, 58, 0.856);
+    height: 3em;
+    margin: 2em 1em;
+
 }
 .Tienda h3{
     color: white;
     font-size: 30px;
 }
 
-.contenedor0{
+.elige {
+    display: flex;
+    justify-content: space-around;    
+    margin-top: 20px;
+}
+
+.elige h2{
+    font-size: 40px;
+    color: rgba(17, 18, 96, 0.492);
+}
+
+.estaciones {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.estaciones h4{
+    font-size: 30px;
+    color: rgba(17, 18, 96, 0.492);
+}
+
+
+.contenedor {
+    display: flex;
+    justify-content:space-evenly;
+    width: 100%;
+}
+
+.contenedor .item b{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 0.69);
+}
+
+.contenedor0, .contenedor1, .contenedor2{
     height: 550px;
-    width: 550px;
-    margin-bottom: 35px;
-    margin-top: 50px;
+    width: 480px;
+    padding: 10px;
+    margin-bottom: 50px;
+    margin-top: 20px;
     margin-left: 100px;
     margin-right: 50px;
     display: flex;
     flex-wrap: wrap;
     align-content: stretch;
-    padding: 20px;
-    gap: 20px;
     background-color: aliceblue;
+    border: transparent;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 20px rgba(17, 18, 96, 0.209); 
+    transform: perspective(1000px) rotateX(10deg);
 }
 
-.item{
+.item {
     width: 120px;
     height: 120px;
     margin: 15px;
     border-top-right-radius: 35px;
     border-bottom-left-radius: 35px;
-    /* position: relative; */
+    font-size: 23px;
+    position: relative;
     transition: 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .item:hover{
     transform: scale(1.3);
     opacity: 1;
     filter: blur(0px);
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.747)
+    box-shadow: 10px 5px 5px rgba(17, 18, 96, 0.492);
 }
 
 .item0-1{
     background: rgb(227, 225, 210);
-    font-size: 23px;
 }
 
 .item0-2{
     background: rgb(194, 196, 183);
-    font-size: 23px;
 }
 
 .item0-3{
     background: rgb(209, 207, 208);
-    font-size: 23px;
 }
 
 .item0-4{
     background: rgb(173, 169, 144);
-    font-size: 23px;
 }
 
 .item0-5{
     background: rgb( 191, 202, 194);
-    font-size: 23px;
 }
 
 .item0-6{
     background: rgb( 210, 200, 209);
-    font-size: 23px;
 }
 
 .item0-7{
     background: rgb( 147, 154, 138);
-    font-size: 23px;
 }
 
 .item0-8{
     background: rgb(62, 85, 93);
-    font-size: 23px;
 }
 
 .item0-9{
     background: rgb(110, 106, 105);
-    font-size: 23px;
-}
-
-.contenedor1{
-    height: 550px;
-    width: 550px;
-    margin-bottom: 35px;
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: stretch;
-    padding: 20px;
-    gap: 20px;
-    background-color: aliceblue;
 }
 
 .item1-1{
     background: rgb(230, 211, 194);
-    font-size: 23px;
 }
 .item1-2{
     background: rgb(232, 217, 210);
-    font-size: 23px;
 }
 .item1-3{
     background: rgb(219, 195, 185);
-    font-size: 23px;
 }
 .item1-4{
     background: rgb(226, 208, 134);
-    font-size: 23px;
 }
 .item1-5{
     background: rgb(218, 192, 165);
-    font-size: 23px;
 }
 .item1-6{
     background: rgb(182, 126, 127);
-    font-size: 23px;
 }
 .item1-7{
     background: rgb(193, 133, 73);
-    font-size: 23px;
 }
 .item1-8{
     background: rgb(147, 79, 44);
-    font-size: 23px;
 }
 .item1-9{
     background: rgb(97, 81, 82);
-    font-size: 23px;
-}
-/* .img4{
-    height: 700px;
-    margin-bottom: 35px;
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 50px;
 }
 
-.img5{
-    height: 700px;
-    margin-bottom: 35px;
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 50px;
+.item2-1{
+    background: #8E354A;
 }
-
-.img6{
-    height: 700px;
-    margin-bottom: 35px;
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 50px;
-} */
+.item2-2{
+    background: #c46424;
+}
+.item2-3{
+    background: #FFA07A;
+}
+.item2-4{
+    background: #FFDAB9;
+}
+.item2-5{
+    background: #FDB813;
+}
+.item2-6{
+    background: #E38AAE;
+}
+.item2-7{
+    background: #1B4D3E;
+}
+.item2-8{
+    background: #3C435A;
+}
+.item2-9{
+    background: #62422B;
+}
 
 .Calculadora{
     display: flex;
