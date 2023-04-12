@@ -27,6 +27,13 @@ formCalculadora.addEventListener("submit", (event) =>{
     </div>    
     `
     formCalculadora.reset()
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'exito',
+        showConfirmButton: false,
+        timer: 1500
+    })
     
 })
 
@@ -76,6 +83,13 @@ formContacto.addEventListener("submit",(event)=>{
     })
     renderizarUsuarios()
     formContacto.reset()
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Sus Datos Fueron Registrados',
+        showConfirmButton: false,
+        timer: 1500
+    })
 })
 
 
