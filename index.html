@@ -19,7 +19,7 @@
             <nav>
                 <a href="./pages/nosotros.html"><i class="bi bi-people"></i>Nosotros</a>
                 <a href="./pages/carritodecompras.html"><i class="bi bi-bag"></i>Tienda</a>
-                <a href="./pages/contacto.html"><i class="bi bi-person"></i>Registrarse</a> 
+                <a href="./pages/registrarse.html"><i class="bi bi-person"></i>Registrarse</a> 
             </nav>
         </header>
         <main>
@@ -133,15 +133,15 @@
                     <form id = "formCalculadora">
                         <ul class="calConteiner">
                             <li>
-                                <label for="">Altura de pared: </label>
+                                <label for="altura">Altura de pared: </label>
                                 <input type="number" id="altura" name="altura" required>
                             </li>
                             <li>
-                                <label for="">Largo de pared: </label>
+                                <label for="largo">Largo de pared: </label>
                                 <input type="number" id="largo" name="largo" required>
                             </li>
                             <li>
-                                <label for="">Cantidad de manos: </label>
+                                <label for="manos">Cantidad de manos: </label>
                                 <input type="number" id="manos" name="manos" required>
                             </li>
                         </ul>
@@ -151,34 +151,84 @@
                     <p>* Se recomienda no descartar puertas y ventanas ya que siempre debe sobrar un poco de pintura. Cabe mencionar que en algunas ocaciones el rendimiento resulta ser menor de lo que indica el envase y hay que tener en cuenta la mayor absorción pintura de la pared durante la primera mano con respecto a las siguientes.</p>
                 </div>
             </section>
-            <div class="formularioContacto">
-                <h3>Contacto</h3>
-                <form id="contacto">
-                    <div class="inputContainer">
-                        <label for="">Ingrese su Nombre</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
-                    <div class="inputContainer">
-                        <label for="">Ingrese su Apellido</label>
-                        <input type="text" id="apellido" name="apellido" required>
-                    </div>
-                    <div class="inputContainer">
-                        <label for="">Ingrese su Telefono</label>
-                        <input type="number" id="telefono" name="telefono" required>
-                    </div>
-                    <div class="inputContainer">
-                        <label for="">Ingrese su Email</label>
-                        <input type="enumber" id="email" name="email" required>
-                    </div>
-                    <input type="submit" value="Enviar" class="btn-enviar">
-                </form>
-                <div class="contenedorUsuarios"></div>
-            </div>
+            <br>
+            <section>
+                <form id = "formContacto">
+                    <h3>Contacto</h3>
+                        <p>Completa tus datos y te contactaremos a la brevedad</p>
+                            <div class = "contactoContainer">
+                                    <label for="nombre">Nombre </label>
+                                    <input type="text" id="nombre" name="nombre" required>
+
+                                    <label for="correoElectronico">Correo Electronico</label>
+                                    <input type="email" id="correoElectronico" name="correoElectronico" required>
+
+                                    <label for="motivoDeContacto">Seleccione el motivo de contacto</label>
+
+                                    <div class="motivoContainer">
+                                        <select name="motivoDeContacto" id="motivoDeContacto">
+                                            <option value="productos">Productos</option>
+                                            <option value="retiroDeCompra">Retiro de compra</option>
+                                            <option value="metodosDeCompra">Metodo de compra</option>
+                                        </select>
+                                    </div>
+
+                                        <label for="comentanosTuConsulta">Comentanos tu consulta</label>
+                                        <textarea name="comentanosTuConsulta" id="comentanosTuConsulta" cols="30" rows="10"></textarea>
+
+
+                            </div class = "btn-enviar">
+                                <input type="submit" value="Enviar" class="btn-enviar"/>
+                        </form>
+                <div class="contenedorConsulta"></div>
+            </section>
         </main>
         <footer>
-            <a href="./pages/preguntasfrecuentes.html">Preguntas Frecuentes</a>
-            <a href="./pages/contacto.html">Contacto</a>        
+            <a href="./index.html">
+                <h2>Pinturería 
+                    <div class="icono"><i class= "bi bi-paint-bucket"></i></div>LODI
+                </h2>
+                </a>
+    
+                <div class = "sucContainer"> 
+                    <h6>Sucursal Casa central</h6>
+                    <ul class="domicilio">
+                        <li>Calle 12345</li>
+                        <li>CABA</li>
+                        <li>Buenos Aires</li>
+                        <li>Tel: 987654321</li>
+                    </ul>
+                </div>
+    
+                <div class = "atenContainer">
+                    <nav>
+                        <h6>Atención al Cliente</h6>
+                        <a href="./pages/preguntasfrecuentes.html">Preguntas Frecuentes</a> 
+                        <a href="./pages/registrarse.html">Registrarse</a>
+                        <a href="./pages/productos.html">Productos</a>
+                        <a href="./pages/carritodecompras.html">Compras</a>
+                    </nav>
+                </div>
+    
+                    <div class = "nosContainer">
+                        <h6>Grupo 1</h6>
+                        <ul>
+                            <li> Jose Marcelo Lodi</li>
+                            <li> Alesis Nehring</li>
+                            <li> Alfonso Lopez</li>
+                            <li> Valeria Daffar</li>
+                        </ul>
+                    </div>
+    
+                    <div class = "redesContainer">
+                        <h6>Nuestras Redes</h6>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                    </div>
         </footer>
+        <div class="copyrightcontainer">
+            <p>Pinturerias Lodi® 2023 - Las fotos son a modo ilustrativo</p>
+        </div>
         <script src="./js/script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>
