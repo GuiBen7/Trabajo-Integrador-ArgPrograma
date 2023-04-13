@@ -45,11 +45,14 @@ a i{
     font-size: 20px;
 }
 
-.nav1 a{
+.nav a{
     color: white;
     text-decoration: none;
 }
-
+nav a:hover{
+    transition: 0.5s ease-in-out;
+    color: rgb(254, 75, 5);
+}
 .Propaganda{
     color: white;
     display: flex;
@@ -704,6 +707,11 @@ footer h2 i{
     gap: 10px;
     font-size: 25px;
     color: white;
+}
+
+.atenContainer a:hover{
+    transition: 0.5s ease-in-out;
+    color: rgb(87, 79, 70);
 }
 
 .atenContainer h6{

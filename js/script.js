@@ -4,92 +4,122 @@ const formCalculadora = document.querySelector("#formCalculadora")
 
 const contenedorHTML = document.querySelector(".contenedorResultado")
 
-formCalculadora.addEventListener("submit", (event) =>{
-    event.preventDefault()
+/*llamada de formulario registro*/
 
-    /* se toman datos desde formulario calculadora */
-
-    const base = formCalculadora.largo.value
-    const altura = formCalculadora.altura.value
-    const manos = formCalculadora.manos.value
-
-    /* se establecen constantes para realizar proceso */
-
-    const m2 = base * altura
-    const rendimiento = 10
-    const resultado = ( m2 / rendimiento ) * manos
-
-    /* se imprime resultado */
-
-    contenedorHTML.innerHTML =`
-    <div class="resultadojs">
-        <h3><font color="black">La cantidad de litros a utilizar es: ${resultado} Litros(Rendimiento por litro 10 m2)   </h3>
-    </div>    
-    `
-    formCalculadora.reset()
-    Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'exito',
-        showConfirmButton: false,
-        timer: 1500
-    })
-    
-})
-
-
-/* Llamada de formulario de contacto */
-
-const formContacto = document.querySelector("#contacto")
-
-/* se llama al  contenedor usuario */
-
-const contenedorUsuariosHTML = document.querySelector(".contenedorUsuarios")
-
-
-/* se crea array de usuarios vacio */
+const formulariosUsuarios= document.querySelector("#RegistroUsuarios")
+const contactoRes = document.querySelector(".ContenerUsuarios")
 
 const usuarios = []
 
-/* se crea funcion para llenar el array */
+/* Formulario Contacto */
+
+const formularioContacto = document.querySelector("#formContacto")
+const contenedorContact = document.querySelector(".contenedorConsulta")
+
+// Use el condicional "if" porque la variable formControl no existe en el html de contacto y genera un error. Lo mismo pasa en el html index con la variable formularioUsuarios.
+
+if(formCalculadora) {
+    formCalculadora.addEventListener("submit", (event) =>{
+        event.preventDefault()
+    
+        /* se toman datos desde formulario calculadora */
+    
+        const base = formCalculadora.largo.value
+        const altura = formCalculadora.altura.value
+        const manos = formCalculadora.manos.value
+    
+        /* se establecen constantes para realizar proceso */
+    
+        const m2 = base * altura
+        const rendimiento = 10
+        const resultado = ( m2 / rendimiento ) * manos
+    
+        /* se imprime resultado */
+    
+        contenedorHTML.innerHTML =`
+        <div class="resultadojs">
+            <h3><font color="black">La cantidad de litros a utilizar es: ${resultado} Litros(Rendimiento por litro 10 m2)   </h3>
+        </div>    
+        `
+        formCalculadora.reset()
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Datos Correctos',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    })
+}
+
+/*---------------------formulario Registro------------------------*/
 
 const renderizarUsuarios = () =>{
-    contenedorUsuariosHTML.innerHTML = ""
+    contactoRes.innerHTML = ""
     for(const usuario of usuarios){
-        contenedorUsuariosHTML.innerHTML +=`
-        <div>
-            <h2><b><font color="black">Sus datos fueron grabados correctamente</b></h2>
-            <br>
-            <p><b>Nombre:   ${usuario.nombre}</b></p>
-            <p><b>Apellido:   ${usuario.apellido}</b></p>
-            <p><b>Telefono:   ${usuario.telefono}</b></p>
-            <p><b>Email:   ${usuario.email}</b></p>
-            <br>
-        </div>
+        contactoRes.innerHTML += `
+        <div class= "card-user">
+            <h2>nombre: ${usuario.nombre}</h2>
+            <h3>apellido: ${usuario.apellido}</h3>
+            <p>correoelectronico: ${usuario.correoelectronico}</p>
+            <p>contrasena: ${usuario.contrasena}</p>
+        </div>    
         `
+        Swal.fire(
+            'Exito',
+            'Usuario Creado ',
+            'success'
+        )
     }
 }
 
-formContacto.addEventListener("submit",(event)=>{
-    event.preventDefault()
+if(formulariosUsuarios) {
+    formulariosUsuarios.addEventListener("submit", (event) =>{
+        event.preventDefault()
+        console.log(formulariosUsuarios.nombre.value)
+        usuarios.push ({
+            nombre: formulariosUsuarios.nombre.value,
+            apellido: formulariosUsuarios.apellido.value,
+            correoelectronico: formulariosUsuarios.correoelectronico.value,
+            contrasena: formulariosUsuarios.contrasena.value
+        })
+        renderizarUsuarios()
+        formulariosUsuarios.reset()
 
-    /* se toman datos de formulario */
-    
-    usuarios.push({
-        nombre: formContacto.nombre.value,
-        apellido: formContacto.apellido.value,
-        telefono: formContacto.telefono.value,
-        email: formContacto.email.value,
     })
-    renderizarUsuarios()
-    formContacto.reset()
-    Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Sus Datos Fueron Registrados',
-        showConfirmButton: false,
-        timer: 1500
+}
+
+/*----------------------Formulario Contacto-------------------------- */
+
+const renderizarContacto = () =>{
+    contenedorContact.innerHTML = ""
+    for(const usuario of usuarios){
+        contenedorContact.innerHTML += `
+        <div class= "card-userC">
+            <h2>nombre: ${usuario.nombre}</h2>
+            <p>correoelectronico: ${usuario.correoElectronico}</p>
+        </div>    
+        `
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Gracias Por Contactarnos',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    }
+}
+
+if(formularioContacto) {
+    formularioContacto.addEventListener("submit", (event) =>{
+        event.preventDefault()
+        
+        usuarios.push ({
+            nombre: formularioContacto.nombre.value,
+            correoElectronico: formularioContacto.correoElectronico.value,
+        })
+        renderizarContacto()
+        formularioContacto.reset()
+
     })
-})
-
-
+}
