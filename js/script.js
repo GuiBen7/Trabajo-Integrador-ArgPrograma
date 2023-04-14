@@ -44,7 +44,7 @@ if(formCalculadora) {
         Swal.fire({
             position: 'center',
             icon: 'success',
-            title: 'Datos Correctos',
+            title: 'Calculo Realizado',
             showConfirmButton: false,
             timer: 1500
         })
@@ -75,7 +75,6 @@ const renderizarUsuarios = () =>{
 if(formulariosUsuarios) {
     formulariosUsuarios.addEventListener("submit", (event) =>{
         event.preventDefault()
-        console.log(formulariosUsuarios.nombre.value)
         usuarios.push ({
             nombre: formulariosUsuarios.nombre.value,
             apellido: formulariosUsuarios.apellido.value,
@@ -95,8 +94,10 @@ const renderizarContacto = () =>{
     for(const usuario of usuarios){
         contenedorContact.innerHTML += `
         <div class= "card-userC">
-            <h2>nombre: ${usuario.nombre}</h2>
-            <p>correoelectronico: ${usuario.correoElectronico}</p>
+            <h2><font color="black">Nombre: ${usuario.nombre}</h2>
+            <p><font color="black">Correo: ${usuario.correoElectronico}</p>
+            <br>
+            <p><b><font color="black"> A la brevedad lo contactaremos, muchas gracias!<b/></p>
         </div>    
         `
         Swal.fire({
