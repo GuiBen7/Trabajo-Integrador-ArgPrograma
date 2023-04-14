@@ -1,7 +1,6 @@
 /* llamada de formulario calculadora */
 
 const formCalculadora = document.querySelector("#formCalculadora")
-
 const contenedorHTML = document.querySelector(".contenedorResultado")
 
 /*llamada de formulario registro*/
