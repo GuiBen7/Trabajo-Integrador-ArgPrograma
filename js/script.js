@@ -46,7 +46,8 @@ if(formCalculadora) {
             icon: 'success',
             title: 'Calculo Realizado',
             showConfirmButton: false,
-            timer: 1500
+            timer: 2500,
+            timerProgressBar: true
         })
     })
 }
@@ -58,17 +59,20 @@ const renderizarUsuarios = () =>{
     for(const usuario of usuarios){
         contactoRes.innerHTML += `
         <div class= "card-user">
-            <h2>nombre: ${usuario.nombre}</h2>
-            <h3>apellido: ${usuario.apellido}</h3>
-            <p>correoelectronico: ${usuario.correoelectronico}</p>
-            <p>contrasena: ${usuario.contrasena}</p>
+            <h2>Nombre: ${usuario.nombre}</h2>
+            <h3>Apellido: ${usuario.apellido}</h3>
+            <p>Correoelectronico: ${usuario.correoelectronico}</p>
+            <p>Contraseña: ${usuario.contrasena}</p>
         </div>    
         `
-        Swal.fire(
-            'Exito',
-            'Usuario Creado ',
-            'success'
-        )
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Registro Exitoso',
+            showConfirmButton: false,
+            timer: 2500,
+            timerProgressBar: true
+        })
     }
 }
 
@@ -95,6 +99,7 @@ const renderizarContacto = () =>{
         contenedorContact.innerHTML += `
         <div class= "card-userC">
             <h2><font color="black">Nombre: ${usuario.nombre}</h2>
+            <p><font color="black">Apellido: ${usuario.apellido}</p>
             <p><font color="black">Correo: ${usuario.correoElectronico}</p>
             <br>
             <p><b><font color="black"> A la brevedad lo contactaremos, muchas gracias!<b/></p>
@@ -105,7 +110,8 @@ const renderizarContacto = () =>{
             icon: 'success',
             title: 'Gracias Por Contactarnos',
             showConfirmButton: false,
-            timer: 1500
+            timer: 2000,
+            timerProgressBar: true
         })
     }
 }
@@ -117,6 +123,7 @@ if(formularioContacto) {
         usuarios.push ({
             nombre: formularioContacto.nombre.value,
             correoElectronico: formularioContacto.correoElectronico.value,
+            apellido: formularioContacto.apellido.value,
         })
         renderizarContacto()
         formularioContacto.reset()
